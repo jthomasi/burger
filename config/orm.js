@@ -1,4 +1,4 @@
-var connection = require('./config/connection.js');
+var connection = require('../config/connection.js');
 
 // Helper function for SQL syntax
 function printQuestionMarks(num) {

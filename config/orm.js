@@ -40,7 +40,7 @@ var orm = {
 
 		console.log("Orm: "+queryString);
 
-		connection.query(queryString, vals, function(err, reuslt){
+		connection.query(queryString, vals, function(err, result){
 			if (err) throw err;
 			cb(result);
 		});

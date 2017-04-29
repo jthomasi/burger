@@ -21,7 +21,8 @@ router.post("/", function(req, res){
 		res.redirect("/");
 	});
 });
-router.put("/:id", function(res, req){
+router.put("/:id", function(req, res){
+
 	var condition = "id = "+req.params.id;
 
 	console.log("Controller: "+condition);

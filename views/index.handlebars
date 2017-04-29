@@ -1,6 +1,9 @@
-<h1>Burgers!</h1>
+<div class="jumbotron text-center">
+	<h1>Burger Muncher</h1><br>
+	<h4>Let's munch some burgers.</h4>
+</div>
 
-<h2>Burger's that have not been eaten!</h2>
+<h2>Burger's that have NOT been munched!</h2>
 
 <ul>
 	{{#each burgers}}
@@ -10,7 +13,7 @@
 
 				<form action="/{{this.id}}?_method=PUT" method="POST">
 					<input type="hidden" name="devoured" value="true">
-					<button type="submit">Eat this burger!</button>
+					<button type="submit">Munch this burger!</button>
 				</form>
 
 	        </li>
@@ -18,7 +21,7 @@
 	{{/each}}
 </ul>
 
-<h2>Burger's that have been eaten!</h2>
+<h2>Burger's that have been munched!</h2>
 
 <ul>
 	{{#each burgers}}
@@ -28,7 +31,7 @@
 
 				<form action="/{{this.id}}?_method=PUT" method="POST">
 					<input type="hidden" name="devoured" value="false">
-					<button type="submit">Re-cook this burger!
+					<button type="submit">Re-munch this burger!
 					</button>
 				</form>
 			</li>
@@ -45,9 +48,9 @@
 	</div>
 
 	<div class="form-group">
-		<label for="devour">Eaten? (Select)</label><br>
-		<input type="radio" name="devoured" value="1" checked> Eaten!<br>
-		<input type="radio" name="devoured" value="0"> Not Eaten
+		<label for="devour">Munched? (Select)</label><br>
+		<input type="radio" name="devoured" value="1" checked> Munched!<br>
+		<input type="radio" name="devoured" value="0"> Not Munched...
 	</div>
 
 	<button type="submit">Add Burger</button>

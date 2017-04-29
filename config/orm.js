@@ -20,11 +20,11 @@ function objToSql(ob) {
 }
 
 var orm = {
-	
+
 	selectAll : function(table,cb) {
 		var queryString = "SELECT * FROM "+table+";";
 
-		console.log(queryString);
+		console.log("Orm: "+queryString);
 
 		connection.query(queryString, function(err, result) {
 			if (err) throw err;
@@ -38,7 +38,7 @@ var orm = {
 		queryString += printQuestionMarks(vals.length);
 		queryString += ")";
 
-		console.log(queryString);
+		console.log("Orm: "+queryString);
 
 		connection.query(queryString, vals, function(err, reuslt){
 			if (err) throw err;
@@ -52,7 +52,7 @@ var orm = {
 		queryString += " WHERE ";
 		queryString += condition;
 
-		console.log(queryString);
+		console.log("Orm: "+queryString);
 
 		connection.query(queryString, function(err, result){
 			if (err) throw err;

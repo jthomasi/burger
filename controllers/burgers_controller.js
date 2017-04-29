@@ -8,7 +8,7 @@ router.get("/", function(req, res){
 		var burgerObj = {
 			burgers: data
 		};
-		console.log(burgerObj);
+		console.log("Controller: "+burgerObj);
 		res.render("index", burgerObj);
 	});
 });
@@ -24,7 +24,7 @@ router.post("/", function(req, res){
 router.put("/:id", function(res, req){
 	var condition = "id = "+req.params.id;
 
-	console.log(condition);
+	console.log("Controller: "+condition);
 
 	burger.updateOne({
 		devoured: req.body.devoured
